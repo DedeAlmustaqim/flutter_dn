@@ -43,6 +43,21 @@ class Get {
     mainTheme.value = theme;
   }
 
+  static void put<T>(T instance) {
+    final key = T.toString();
+    _instance[key] = instance;
+  }
+
+  static final Map<String, dynamic> _instance = {};
+  static T find<T>() {
+    final key = T.toString();
+    if (_instance.containsKey(key)) {
+      return _instance[key] as T;
+    } else {
+      throw Exception("instance not found");
+    }
+  }
+
   static ThemeData get theme {
     return Theme.of(Get.currentContext);
   }

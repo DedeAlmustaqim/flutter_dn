@@ -1,5 +1,4 @@
 import 'package:hyper_ui/core.dart';
-import 'package:hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -17,11 +16,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Capek Ngoding',
+      title: 'Keyan Shoes',
       navigatorKey: Get.navigatorKey,
       debugShowCheckedModeBanner: false,
       theme: getDefaultTheme(),
-      home: MainNavigationView(),
+      home: SplashView(),
       builder: (context, child) => DebugView(
         context: context,
         child: child,
